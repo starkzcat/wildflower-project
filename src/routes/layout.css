@@ -1,1 +1,58 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-brand-charcoal: #282b2e;
+  --color-brand-slate: #44484d;
+  --color-brand-stone: #6e747b;
+  --color-brand-lightstone: #bcbfc2;
+  --color-brand-chalk: #e9eae8;
+  --color-brand-canvas: #f7f6f3;
+  --color-brand-olive: #4d5940;
+  --color-brand-oliveLight: #627252;
+  --color-brand-oliveMuted: #e8ece3;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+@utility badge-stamp {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+}
+
+@utility editorial-dropcap::first-letter {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  float: left;
+  font-size: 4rem;
+  line-height: 0.85;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+  color: var(--color-brand-charcoal);
+  font-weight: 600;
+}
+
+@utility no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-brand-canvas);
+  color: var(--color-brand-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-brand-olive);
+  color: #ffffff;
+}
