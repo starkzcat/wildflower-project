@@ -21,24 +21,25 @@
   font-size: 0.68rem;
 }
 
-@utility editorial-dropcap::first-letter {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  float: left;
-  font-size: 4rem;
-  line-height: 0.85;
-  padding-right: 0.5rem;
-  padding-top: 0.2rem;
-  color: var(--color-brand-charcoal);
-  font-weight: 600;
-}
-
-@utility no-scrollbar::-webkit-scrollbar {
-  display: none;
+@utility editorial-dropcap {
+  &::first-letter {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    float: left;
+    font-size: 4rem;
+    line-height: 0.85;
+    padding-right: 0.5rem;
+    padding-top: 0.2rem;
+    color: var(--color-brand-charcoal);
+    font-weight: 600;
+  }
 }
 
 @utility no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 html {
