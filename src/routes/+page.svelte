@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { catalogueData, teamData } from '#lib';
-	import ProductCard from '#lib/components/catalogue/ProductCard.svelte';
-	import TeamCard from '#lib/components/team/TeamCard.svelte';
-	import SectionHeader from '#lib/components/ui/SectionHeader.svelte';
+	import { catalogueData, teamData } from "#lib";
+	import ProductCard from "#lib/components/catalogue/ProductCard.svelte";
+	import TeamCard from "#lib/components/team/TeamCard.svelte";
+	import SectionHeader from "#lib/components/ui/SectionHeader.svelte";
 
 	// Highlight the first 3 hats for the home lookbook preview
 	const teaserHats = catalogueData.slice(0, 3);
@@ -20,14 +20,16 @@
 			<div
 				class="inline-flex items-center space-x-2 bg-brand-oliveMuted px-3.5 py-1.5 rounded-full border border-brand-olive/20 text-brand-olive text-xs font-semibold uppercase tracking-wider"
 			>
-				<span class="w-2 h-2 rounded-full bg-brand-olive animate-pulse"></span>
+				<span class="w-2 h-2 rounded-full bg-brand-olive animate-pulse"
+				></span>
 				<span>Conscious Millinery &bull; Autumn 2026 Collection</span>
 			</div>
 
 			<h1
 				class="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal leading-[1.08] text-brand-charcoal"
 			>
-				Modern silhouettes, blocked with <em class="italic font-serif font-light text-brand-stone"
+				Modern silhouettes, blocked with <em
+					class="italic font-serif font-light text-brand-stone"
 					>ancestral patience.</em
 				>
 			</h1>
@@ -35,12 +37,16 @@
 			<p
 				class="text-base sm:text-lg text-brand-slate max-w-xl font-light leading-relaxed editorial-dropcap"
 			>
-				We founded Wildflower in rebellion against disposable culture. Our headwear is not churned out by
-				factory conveyers; every brim is steamed, blocked over heritage wooden molds, and shaped by
-				hand using 100% natural, regeneratively farmed fibers made to outlive passing trends.
+				We founded Wildflower in rebellion against disposable culture.
+				Our headwear is not churned out by factory conveyers; every brim
+				is steamed, blocked over heritage wooden molds, and shaped by
+				hand using 100% natural, regeneratively farmed fibers made to
+				outlive passing trends.
 			</p>
 
-			<div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+			<div
+				class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
+			>
 				<a
 					href="/shop"
 					class="inline-flex justify-center items-center gap-3 bg-brand-charcoal hover:bg-brand-slate text-brand-chalk px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-200 shadow-md hover:shadow-lg"
@@ -58,22 +64,33 @@
 			</div>
 
 			<!-- Quick Trust Badges -->
-			<div class="pt-6 border-t border-brand-chalk grid grid-cols-3 gap-4 text-left">
+			<div
+				class="pt-6 border-t border-brand-chalk grid grid-cols-3 gap-4 text-left"
+			>
 				<div>
-					<span class="block font-serif text-2xl text-brand-charcoal">100%</span>
-					<span class="text-[11px] text-brand-stone uppercase tracking-wider font-semibold"
+					<span class="block font-serif text-2xl text-brand-charcoal"
+						>100%</span
+					>
+					<span
+						class="text-[11px] text-brand-stone uppercase tracking-wider font-semibold"
 						>Zero-Plastic Fibers</span
 					>
 				</div>
 				<div>
-					<span class="block font-serif text-2xl text-brand-charcoal">48 Hrs</span>
-					<span class="text-[11px] text-brand-stone uppercase tracking-wider font-semibold"
+					<span class="block font-serif text-2xl text-brand-charcoal"
+						>48 Hrs</span
+					>
+					<span
+						class="text-[11px] text-brand-stone uppercase tracking-wider font-semibold"
 						>Handcraft per Batch</span
 					>
 				</div>
 				<div>
-					<span class="block font-serif text-2xl text-brand-charcoal">14</span>
-					<span class="text-[11px] text-brand-stone uppercase tracking-wider font-semibold"
+					<span class="block font-serif text-2xl text-brand-charcoal"
+						>14</span
+					>
+					<span
+						class="text-[11px] text-brand-stone uppercase tracking-wider font-semibold"
 						>Partner Boutiques</span
 					>
 				</div>
@@ -83,7 +100,7 @@
 		<!-- Hero Right Column: High Quality Editorial Visuals with Artisan Stamp -->
 		<div class="lg:col-span-5 relative">
 			<div
-				class="relative rounded-2xl overflow-hidden border border-brand-lightstone/80 bg-white p-3 shadow-xl"
+				class="rounded-2xl overflow-hidden border border-brand-lightstone/80 bg-white p-3 shadow-xl"
 			>
 				<div class="relative overflow-hidden rounded-xl aspect-[4/5]">
 					<img
@@ -92,7 +109,8 @@
 						class="w-full h-full object-cover object-center filter grayscale-[20%] hover:scale-105 transition-transform duration-700"
 						onerror={(e) => {
 							const img = e.currentTarget as HTMLImageElement;
-							img.src = 'https://placehold.co/800x1000/282b2e/f7f6f3?text=Wildflower+Millinery';
+							img.src =
+								"https://placehold.co/800x1000/282b2e/f7f6f3?text=Wildflower+Millinery";
 						}}
 					/>
 				</div>
@@ -102,11 +120,16 @@
 					class="absolute -bottom-4 -left-4 bg-brand-charcoal text-brand-chalk p-4 rounded-2xl shadow-xl max-w-[210px] border border-brand-slate hidden sm:block"
 				>
 					<div class="flex items-center gap-2 mb-1">
-						<i class="fa-solid fa-feather text-brand-oliveLight text-sm"></i>
-						<span class="badge-stamp text-brand-lightstone">Heritage Blocked</span>
+						<i
+							class="fa-solid fa-feather text-brand-oliveLight text-sm"
+						></i>
+						<span class="badge-stamp text-brand-lightstone"
+							>Heritage Blocked</span
+						>
 					</div>
 					<p class="text-[11px] text-brand-chalk leading-snug">
-						Each piece bears the hand-stamped signature of the milliner who shaped it.
+						Each piece bears the hand-stamped signature of the
+						milliner who shaped it.
 					</p>
 				</div>
 			</div>
@@ -137,10 +160,15 @@
 				>
 					<i class="fa-solid fa-seedling"></i>
 				</div>
-				<h3 class="font-serif text-2xl text-white mb-2">Regenerative Sourcing</h3>
-				<p class="text-sm text-brand-lightstone leading-relaxed font-light">
-					Our raw felts come from heritage wool farms practicing rotational grazing in the Pacific
-					Northwest and organic Toquilla palm harvested sustainably in Ecuador.
+				<h3 class="font-serif text-2xl text-white mb-2">
+					Regenerative Sourcing
+				</h3>
+				<p
+					class="text-sm text-brand-lightstone leading-relaxed font-light"
+				>
+					Our raw felts come from heritage wool farms practicing
+					rotational grazing in the Pacific Northwest and organic
+					Toquilla palm harvested sustainably in Ecuador.
 				</p>
 				<div
 					class="mt-4 pt-4 border-t border-brand-slate/60 text-[11px] font-semibold tracking-wider uppercase text-brand-oliveLight"
@@ -158,10 +186,16 @@
 				>
 					<i class="fa-solid fa-shapes"></i>
 				</div>
-				<h3 class="font-serif text-2xl text-white mb-2">Heirloom Wooden Blocks</h3>
-				<p class="text-sm text-brand-lightstone leading-relaxed font-light">
-					We refuse plastic molds. Crowns and brims are manually steamed and stretched over carved
-					walnut blocks dating back to the mid-century, ensuring unique curvature and durability.
+				<h3 class="font-serif text-2xl text-white mb-2">
+					Heirloom Wooden Blocks
+				</h3>
+				<p
+					class="text-sm text-brand-lightstone leading-relaxed font-light"
+				>
+					We refuse plastic molds. Crowns and brims are manually
+					steamed and stretched over carved walnut blocks dating back
+					to the mid-century, ensuring unique curvature and
+					durability.
 				</p>
 				<div
 					class="mt-4 pt-4 border-t border-brand-slate/60 text-[11px] font-semibold tracking-wider uppercase text-brand-oliveLight"
@@ -179,10 +213,15 @@
 				>
 					<i class="fa-solid fa-shop"></i>
 				</div>
-				<h3 class="font-serif text-2xl text-white mb-2">Slow Boutique Distribution</h3>
-				<p class="text-sm text-brand-lightstone leading-relaxed font-light">
-					By intentionally keeping sales in physical partner boutiques rather than rapid direct-to-door
-					mailers, we protect local retail culture and eliminate excessive shipping emissions.
+				<h3 class="font-serif text-2xl text-white mb-2">
+					Slow Boutique Distribution
+				</h3>
+				<p
+					class="text-sm text-brand-lightstone leading-relaxed font-light"
+				>
+					By intentionally keeping sales in physical partner boutiques
+					rather than rapid direct-to-door mailers, we protect local
+					retail culture and eliminate excessive shipping emissions.
 				</p>
 				<div
 					class="mt-4 pt-4 border-t border-brand-slate/60 text-[11px] font-semibold tracking-wider uppercase text-brand-oliveLight"
@@ -198,11 +237,17 @@
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
 	<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
 		<div>
-			<span class="badge-stamp text-brand-olive font-semibold">Seasonal Lookbook</span>
-			<h2 class="font-serif text-3xl sm:text-5xl text-brand-charcoal mt-1">Curated Hat Silhouettes</h2>
+			<span class="badge-stamp text-brand-olive font-semibold"
+				>Seasonal Lookbook</span
+			>
+			<h2
+				class="font-serif text-3xl sm:text-5xl text-brand-charcoal mt-1"
+			>
+				Curated Hat Silhouettes
+			</h2>
 			<p class="text-sm text-brand-stone mt-2 max-w-lg font-normal">
-				A brief preview of our current atelier collection. Every item can be inspected in detail or
-				tried on at our partner retailers.
+				A brief preview of our current atelier collection. Every item
+				can be inspected in detail or tried on at our partner retailers.
 			</p>
 		</div>
 		<a
@@ -241,18 +286,25 @@
 </section>
 
 <!-- CALL TO ACTION BANNER: Retail Store Locator Invitation -->
-<section class="bg-brand-canvas py-16 px-4 sm:px-6 lg:px-8 border-t border-brand-lightstone/60">
+<section
+	class="bg-brand-canvas py-16 px-4 sm:px-6 lg:px-8 border-t border-brand-lightstone/60"
+>
 	<div
 		class="max-w-5xl mx-auto bg-brand-charcoal text-white rounded-3xl p-8 sm:p-14 shadow-2xl relative overflow-hidden"
 	>
 		<div class="relative z-10 max-w-xl">
-			<span class="badge-stamp text-brand-oliveLight">Try On In Person</span>
+			<span class="badge-stamp text-brand-oliveLight"
+				>Try On In Person</span
+			>
 			<h2 class="font-serif text-3xl sm:text-4xl mt-2 font-normal">
 				Experience the texture of slow craftsmanship.
 			</h2>
-			<p class="text-brand-lightstone text-sm sm:text-base mt-4 font-light leading-relaxed">
-				We believe a proper hat fit is intimate. Visit one of our 14 certified retail partner
-				stockists across New York, Paris, Tokyo, London, and Los Angeles.
+			<p
+				class="text-brand-lightstone text-sm sm:text-base mt-4 font-light leading-relaxed"
+			>
+				We believe a proper hat fit is intimate. Visit one of our 14
+				certified retail partner stockists across New York, Paris,
+				Tokyo, London, and Los Angeles.
 			</p>
 			<div class="mt-8 flex flex-wrap gap-4">
 				<a
