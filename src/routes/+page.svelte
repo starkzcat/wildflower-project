@@ -102,7 +102,7 @@
 			<div
 				class="rounded-2xl overflow-hidden border border-brand-lightstone/80 bg-white p-3 shadow-xl"
 			>
-				<div class="relative overflow-hidden rounded-xl aspect-[4/5]">
+				<div class="relative overflow-hidden rounded-xl aspect-4/5">
 					<img
 						src="https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?auto=format&fit=crop&w=1000&q=80"
 						alt="Model wearing handcrafted modern stone felt fedora"
@@ -117,7 +117,7 @@
 
 				<!-- Artisan Floating Stamp -->
 				<div
-					class="absolute -bottom-4 -left-4 bg-brand-charcoal text-brand-chalk p-4 rounded-2xl shadow-xl max-w-[210px] border border-brand-slate hidden sm:block"
+					class="absolute -bottom-4 -left-4 bg-brand-charcoal text-brand-chalk p-4 rounded-2xl shadow-xl max-w-52.5 border border-brand-slate hidden sm:block"
 				>
 					<div class="flex items-center gap-2 mb-1">
 						<i

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Hat } from '#lib';
-	import { hatModal } from '#lib';
+	import type { Hat } from "#lib";
+	import { hatModal } from "#lib";
 
 	interface Props {
 		hat: Hat;
@@ -15,10 +15,10 @@
 >
 	<div>
 		<div
-			class="relative overflow-hidden rounded-xl aspect-[3/4] bg-brand-canvas mb-4 cursor-pointer"
+			class="relative overflow-hidden rounded-xl aspect-3/4 bg-brand-canvas mb-4 cursor-pointer"
 			onclick={() => hatModal.open(hat)}
 			onkeydown={(e) => {
-				if (e.key === 'Enter' || e.key === ' ') {
+				if (e.key === "Enter" || e.key === " ") {
 					e.preventDefault();
 					hatModal.open(hat);
 				}
@@ -54,15 +54,23 @@
 
 		<div class="space-y-1">
 			<div class="flex items-center justify-between">
-				<h3 class="font-serif text-xl text-brand-charcoal">{hat.title}</h3>
+				<h3 class="font-serif text-xl text-brand-charcoal">
+					{hat.title}
+				</h3>
 				{#if compact}
-					<span class="text-xs font-medium text-brand-stone">{hat.color}</span>
+					<span class="text-xs font-medium text-brand-stone"
+						>{hat.color}</span
+					>
 				{/if}
 			</div>
 			{#if !compact}
-				<span class="text-xs text-brand-olive font-medium block">{hat.color}</span>
+				<span class="text-xs text-brand-olive font-medium block"
+					>{hat.color}</span
+				>
 			{/if}
-			<p class="text-xs text-brand-stone leading-relaxed font-light mt-1">{hat.shortDesc}</p>
+			<p class="text-xs text-brand-stone leading-relaxed font-light mt-1">
+				{hat.shortDesc}
+			</p>
 		</div>
 
 		<!-- Store Information Row -->
@@ -70,7 +78,8 @@
 			class="mt-3 pt-2.5 border-t border-brand-chalk/80 flex items-center justify-between text-[11px] text-brand-stone"
 		>
 			<span class="flex items-center gap-1.5">
-				<i class="fa-solid fa-location-dot text-brand-olive text-[10px]"></i>
+				<i class="fa-solid fa-location-dot text-brand-olive text-[10px]"
+				></i>
 				<span>In {hat.stockists.length} partner boutiques</span>
 			</span>
 			<a
@@ -92,7 +101,9 @@
 			Inspect Craftsmanship
 		</button>
 	{:else}
-		<div class="mt-4 pt-3 border-t border-brand-chalk flex items-center gap-2">
+		<div
+			class="mt-4 pt-3 border-t border-brand-chalk flex items-center gap-2"
+		>
 			<button
 				type="button"
 				onclick={() => hatModal.open(hat)}

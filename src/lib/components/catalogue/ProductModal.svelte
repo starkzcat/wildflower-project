@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { hatModal } from '#lib';
+	import { hatModal } from "#lib";
 
 	const modalState = $derived(hatModal.current);
 	const hat = $derived(modalState.hat);
 
 	function handleKeydown(event: KeyboardEvent) {
-		if (event.key === 'Escape' && modalState.isOpen) {
+		if (event.key === "Escape" && modalState.isOpen) {
 			hatModal.close();
 		}
 	}
@@ -24,7 +24,7 @@
 		class="fixed inset-0 z-50 bg-brand-charcoal/80 flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
 		onclick={handleBackdropClick}
 		onkeydown={(e) => {
-			if (e.key === 'Escape') hatModal.close();
+			if (e.key === "Escape") hatModal.close();
 		}}
 		role="dialog"
 		aria-modal="true"
@@ -46,8 +46,12 @@
 
 			<div class="grid grid-cols-1 md:grid-cols-12">
 				<!-- Modal Image -->
-				<div class="md:col-span-5 bg-white p-4 flex items-center justify-center border-b md:border-b-0 md:border-r border-brand-chalk">
-					<div class="rounded-2xl overflow-hidden aspect-[4/5] w-full max-h-[380px]">
+				<div
+					class="md:col-span-5 bg-white p-4 flex items-center justify-center border-b md:border-b-0 md:border-r border-brand-chalk"
+				>
+					<div
+						class="rounded-2xl overflow-hidden aspect-4/5 w-full max-h-95"
+					>
 						<img
 							src={hat.image}
 							alt={hat.title}
@@ -61,47 +65,84 @@
 				</div>
 
 				<!-- Modal Information & Craftsmanship Story -->
-				<div class="md:col-span-7 p-6 sm:p-8 space-y-4 max-h-[80vh] overflow-y-auto">
+				<div
+					class="md:col-span-7 p-6 sm:p-8 space-y-4 max-h-[80vh] overflow-y-auto"
+				>
 					<div>
-						<span class="badge-stamp text-brand-olive font-semibold">{hat.tag}</span>
-						<h3 id="modal-title" class="font-serif text-3xl text-brand-charcoal font-normal mt-1">
+						<span class="badge-stamp text-brand-olive font-semibold"
+							>{hat.tag}</span
+						>
+						<h3
+							id="modal-title"
+							class="font-serif text-3xl text-brand-charcoal font-normal mt-1"
+						>
 							{hat.title}
 						</h3>
-						<p class="text-xs text-brand-stone font-medium">Finished Color: {hat.color}</p>
+						<p class="text-xs text-brand-stone font-medium">
+							Finished Color: {hat.color}
+						</p>
 					</div>
 
 					<div class="border-t border-b border-brand-chalk py-3">
-						<h4 class="text-xs uppercase font-bold text-brand-charcoal tracking-wider mb-1">
+						<h4
+							class="text-xs uppercase font-bold text-brand-charcoal tracking-wider mb-1"
+						>
 							Craftsmanship & Origin Story
 						</h4>
-						<p class="text-xs text-brand-slate leading-relaxed font-light">
+						<p
+							class="text-xs text-brand-slate leading-relaxed font-light"
+						>
 							{hat.story}
 						</p>
 					</div>
 
 					<!-- Technical Specs Table -->
-					<div class="grid grid-cols-2 gap-3 text-xs bg-white p-3.5 rounded-xl border border-brand-lightstone/60">
+					<div
+						class="grid grid-cols-2 gap-3 text-xs bg-white p-3.5 rounded-xl border border-brand-lightstone/60"
+					>
 						<div>
-							<span class="text-brand-stone block text-[10px] uppercase font-semibold">Crown Height</span>
-							<span class="font-medium text-brand-charcoal">{hat.crown}</span>
+							<span
+								class="text-brand-stone block text-[10px] uppercase font-semibold"
+								>Crown Height</span
+							>
+							<span class="font-medium text-brand-charcoal"
+								>{hat.crown}</span
+							>
 						</div>
 						<div>
-							<span class="text-brand-stone block text-[10px] uppercase font-semibold">Brim Width</span>
-							<span class="font-medium text-brand-charcoal">{hat.brim}</span>
+							<span
+								class="text-brand-stone block text-[10px] uppercase font-semibold"
+								>Brim Width</span
+							>
+							<span class="font-medium text-brand-charcoal"
+								>{hat.brim}</span
+							>
 						</div>
 						<div>
-							<span class="text-brand-stone block text-[10px] uppercase font-semibold">Fiber Grade</span>
-							<span class="font-medium text-brand-charcoal">{hat.grade}</span>
+							<span
+								class="text-brand-stone block text-[10px] uppercase font-semibold"
+								>Fiber Grade</span
+							>
+							<span class="font-medium text-brand-charcoal"
+								>{hat.grade}</span
+							>
 						</div>
 						<div>
-							<span class="text-brand-stone block text-[10px] uppercase font-semibold">Blocking Time</span>
-							<span class="font-medium text-brand-charcoal">{hat.cureTime}</span>
+							<span
+								class="text-brand-stone block text-[10px] uppercase font-semibold"
+								>Blocking Time</span
+							>
+							<span class="font-medium text-brand-charcoal"
+								>{hat.cureTime}</span
+							>
 						</div>
 					</div>
 
 					<!-- Stockist Availability Prompt -->
 					<div class="pt-2">
-						<h4 class="text-xs uppercase font-bold text-brand-charcoal tracking-wider mb-2">
+						<h4
+							class="text-xs uppercase font-bold text-brand-charcoal tracking-wider mb-2"
+						>
 							Available At Stockists:
 						</h4>
 						<div class="flex flex-wrap gap-2">
@@ -109,7 +150,9 @@
 								<span
 									class="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-chalk/80 text-brand-charcoal rounded-lg text-[11px] font-medium border border-brand-lightstone/60"
 								>
-									<i class="fa-solid fa-store text-brand-olive text-[10px]"></i>
+									<i
+										class="fa-solid fa-store text-brand-olive text-[10px]"
+									></i>
 									{stockist}
 								</span>
 							{/each}
