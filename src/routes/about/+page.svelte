@@ -48,7 +48,7 @@
 				<img
 					src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=900&q=80"
 					alt="Artisan hands shaping hat felt"
-					class="w-full h-[400px] object-cover filter grayscale-[15%]"
+					class="w-full h-[400px] object-cover"
 				/>
 			</div>
 		</div>
@@ -87,7 +87,7 @@
 				<img
 					src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=900&q=80"
 					alt="Raw natural textiles and botanicals"
-					class="w-full h-[400px] object-cover filter grayscale-[25%]"
+					class="w-full h-[400px] object-cover"
 				/>
 			</div>
 		</div>

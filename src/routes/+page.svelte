@@ -106,7 +106,7 @@
 					<img
 						src="https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?auto=format&fit=crop&w=1000&q=80"
 						alt="Model wearing handcrafted modern stone felt fedora"
-						class="w-full h-full object-cover object-center filter grayscale-[20%] hover:scale-105 transition-transform duration-700"
+						class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
 						onerror={(e) => {
 							const img = e.currentTarget as HTMLImageElement;
 							img.src =

@@ -21,7 +21,7 @@
 </script>
 
 <header
-	class="sticky top-0 z-40 bg-brand-canvas/95 backdrop-blur-md border-b border-brand-chalk transition-all duration-300"
+	class="sticky top-0 z-40 bg-brand-canvas border-b border-brand-chalk transition-all duration-300"
 >
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-20 gap-3">

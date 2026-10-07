@@ -16,7 +16,7 @@
 			<img
 				src={member.image}
 				alt="{member.name} - {member.role}"
-				class="w-full h-full object-cover object-top filter grayscale-[20%]"
+				class="w-full h-full object-cover object-top"
 				onerror={(e) => {
 					const img = e.currentTarget as HTMLImageElement;
 					img.src = `https://placehold.co/600x600/44484d/e9eae8?text=${encodeURIComponent(member.name)}`;

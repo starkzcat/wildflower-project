@@ -30,7 +30,7 @@
 			<img
 				src={hat.image}
 				alt={hat.title}
-				class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter grayscale-[15%]"
+				class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
 				onerror={(e) => {
 					const img = e.currentTarget as HTMLImageElement;
 					img.src = `https://placehold.co/600x800/282b2e/f7f6f3?text=${encodeURIComponent(hat.title)}`;
@@ -45,7 +45,7 @@
 
 			<!-- Available In Store Label -->
 			<span
-				class="absolute top-3 right-3 bg-brand-canvas/95 backdrop-blur-xs text-brand-olive text-[10px] font-semibold tracking-wider px-2.5 py-1 rounded-full border border-brand-olive/25 shadow-xs flex items-center gap-1.5"
+				class="absolute top-3 right-3 bg-brand-canvas text-brand-olive text-[10px] font-semibold tracking-wider px-2.5 py-1 rounded-full border border-brand-olive/25 shadow-xs flex items-center gap-1.5"
 			>
 				<span class="w-1.5 h-1.5 rounded-full bg-brand-olive"></span>
 				Available In Store

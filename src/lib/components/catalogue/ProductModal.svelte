@@ -21,7 +21,7 @@
 
 {#if modalState.isOpen && hat}
 	<div
-		class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+		class="fixed inset-0 z-50 bg-brand-charcoal/80 flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
 		onclick={handleBackdropClick}
 		onkeydown={(e) => {
 			if (e.key === 'Escape') hatModal.close();
@@ -51,7 +51,7 @@
 						<img
 							src={hat.image}
 							alt={hat.title}
-							class="w-full h-full object-cover object-center filter grayscale-[10%]"
+							class="w-full h-full object-cover object-center"
 							onerror={(e) => {
 								const img = e.currentTarget as HTMLImageElement;
 								img.src = `https://placehold.co/600x800/282b2e/f7f6f3?text=${encodeURIComponent(hat.title)}`;
