@@ -36,10 +36,19 @@
 					img.src = `https://placehold.co/600x800/282b2e/f7f6f3?text=${encodeURIComponent(hat.title)}`;
 				}}
 			/>
+			<!-- Material Tag -->
 			<span
 				class="absolute top-3 left-3 bg-brand-charcoal/90 text-brand-chalk text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full"
 			>
 				{hat.tag}
+			</span>
+
+			<!-- Available In Store Label -->
+			<span
+				class="absolute top-3 right-3 bg-brand-canvas/95 backdrop-blur-xs text-brand-olive text-[10px] font-semibold tracking-wider px-2.5 py-1 rounded-full border border-brand-olive/25 shadow-xs flex items-center gap-1.5"
+			>
+				<span class="w-1.5 h-1.5 rounded-full bg-brand-olive"></span>
+				Available In Store
 			</span>
 		</div>
 
@@ -55,6 +64,23 @@
 			{/if}
 			<p class="text-xs text-brand-stone leading-relaxed font-light mt-1">{hat.shortDesc}</p>
 		</div>
+
+		<!-- Store Information Row -->
+		<div
+			class="mt-3 pt-2.5 border-t border-brand-chalk/80 flex items-center justify-between text-[11px] text-brand-stone"
+		>
+			<span class="flex items-center gap-1.5">
+				<i class="fa-solid fa-location-dot text-brand-olive text-[10px]"></i>
+				<span>In {hat.stockists.length} partner boutiques</span>
+			</span>
+			<a
+				href="/locator"
+				class="text-brand-charcoal hover:text-brand-olive font-semibold transition-colors flex items-center gap-1"
+			>
+				<span>Find Store</span>
+				<i class="fa-solid fa-arrow-right text-[9px]"></i>
+			</a>
+		</div>
 	</div>
 
 	{#if compact}
@@ -66,7 +92,7 @@
 			Inspect Craftsmanship
 		</button>
 	{:else}
-		<div class="mt-5 pt-4 border-t border-brand-chalk flex items-center gap-2">
+		<div class="mt-4 pt-3 border-t border-brand-chalk flex items-center gap-2">
 			<button
 				type="button"
 				onclick={() => hatModal.open(hat)}

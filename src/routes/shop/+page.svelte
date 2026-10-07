@@ -48,16 +48,22 @@
 			</div>
 		</div>
 
-		<!-- Filter Tabs -->
-		<div class="mt-8 flex items-center gap-2 overflow-x-auto no-scrollbar pb-2">
+		<!-- Filter Tabs (Optimized for Mobile Touch & Spacing) -->
+		<div
+			class="mt-8 flex items-center gap-3 overflow-x-auto no-scrollbar pb-3 pt-1 -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth snap-x snap-mandatory"
+			role="tablist"
+			aria-label="Catalogue category filters"
+		>
 			{#each filterTabs as tab}
 				<button
 					type="button"
+					role="tab"
+					aria-selected={activeFilter === tab.id}
 					onclick={() => (activeFilter = tab.id)}
-					class="px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold transition-all {activeFilter ===
+					class="px-5 py-2.5 sm:py-2 rounded-full text-xs uppercase tracking-wider font-semibold whitespace-nowrap shrink-0 snap-start transition-all duration-200 active:scale-95 shadow-xs {activeFilter ===
 					tab.id
-						? 'bg-brand-charcoal text-white'
-						: 'bg-white text-brand-slate border border-brand-lightstone hover:border-brand-charcoal'}"
+						? 'bg-brand-charcoal text-white ring-2 ring-brand-charcoal/20'
+						: 'bg-white text-brand-slate border border-brand-lightstone hover:border-brand-charcoal hover:text-brand-charcoal'}"
 				>
 					{tab.label}
 				</button>

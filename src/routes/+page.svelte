@@ -51,7 +51,7 @@
 					href="/shop"
 					class="inline-flex justify-center items-center gap-3 bg-brand-charcoal hover:bg-brand-slate text-brand-chalk px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-200 shadow-md hover:shadow-lg"
 				>
-					<span>Explore The Catalogue</span>
+					<span>Explore the Collection</span>
 					<i class="fa-solid fa-arrow-right text-xs"></i>
 				</a>
 
